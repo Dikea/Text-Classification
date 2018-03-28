@@ -59,16 +59,14 @@ def build_emb_matrix(corpus):
 
 if __name__ == '__main__': 
     # Tokenize data
-    '''
     tokenize_corpus(config.raw_train_fpath, config.train_fpath,
         is_train_data = True)
     tokenize_corpus(config.raw_predict_fpath, config.predict_fpath, 
         is_train_data = False)
-    '''
     corpus = _get_corpus()
 
     # Train word2vec
-    #NlpUtil.train_word2vec(corpus, './model/word2vec')
+    NlpUtil.train_word2vec(corpus, './model/word2vec')
 
     # Build emb matrix
     build_emb_matrix(corpus)
